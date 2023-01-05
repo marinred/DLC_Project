@@ -1,4 +1,4 @@
-# DLC_Project
+# 🎵 DLC_Project
 [스파르타코딩클럽 내일배움캠프 AI 3기] A4팀 추천 시스템 프로젝트
 ## 프로젝트 소개
 **DLC_Music**은 음악을 `좋아요` 했을 때, 좋아요 한 음악 리스트를 기반으로
@@ -54,22 +54,19 @@
 
 
 ![image](https://user-images.githubusercontent.com/113073974/200458147-74b26a91-c646-443b-9d7a-b14c82bd036d.png)
-## DB 설계
-![DB](https://user-images.githubusercontent.com/113073974/200451809-50c92ac2-be5d-4132-969b-c1730e18e9a1.png)
+
+
+## ERD 설계
+![](https://velog.velcdn.com/images/marinred/post/3c1665f6-fd99-4732-b4e7-cc506e7d446f/image.jpg)
 ## API 설계
-| App | 기능 | URL | Method | Request | Response |
-| --- | --- | --- | --- | --- | --- |
-| User |  |  |  |  |  |
-|  | 회원가입 | /user/signup/ | POST | {“username”,“email”,“password”,”password2”} |  |
-|  | 로그인 | /user/api/token/ | POST | {“username”, “password”} |  |
-|  | 프로필 | /user/<int:user_id>/ | GET |  | {“user_id”, "username”, “email”, "bio”} |
-|  | 프로필 수정 | /user/<int:user_id>/ | PUT | {“username”, “email”, “bio”} | {“user_id”, “username”, “email”, “bio”} |
-| Music |  |  |  |  |  |
-|  | 노래 목록 조회 | / | GET |  | {“music_id”, “name”, “year”, “artist”, “aalbum”, “music_image”, “like”} |
-|  | 노래 상세 조회 | /<int:music_id>/ | GET |  | {“music_id”, “name”, “year”, “artist”, “aalbum”, “music_image”, “like”} |
-|  | 노래 좋아요 | /<int:music_id>/like/ | POST | {“user_id”} |  |
-| Review |  |  |  |  |  |
-|  | 리뷰 작성 | /<int:music_id>/review/ | POST | {“content”} |  |
+[API 명세서](https://documenter.getpostman.com/view/23810621/2s8Z73xATR)
+
+## ⚠️ 트러블 슈팅
+
+  - music의 review get 도중 이슈
+  
+  [Wiki로 이동](https://github.com/marinred/DLC_Project/wiki/TroubleShooting)
+
 ## 머신러닝 데이터셋
 [![Spotify dataset](https://user-images.githubusercontent.com/113073974/200451893-73c26183-c753-444f-bcad-2628a2971d26.png)](https://www.kaggle.com/datasets/vatsalmavani/spotify-dataset)
 ## 프로젝트 시연영상
