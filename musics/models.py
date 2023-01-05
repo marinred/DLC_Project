@@ -3,6 +3,7 @@ from user.models import User
 
 # Create your models here.
 
+
 class Music(models.Model):
     name = models.CharField(max_length=50)
     year = models.CharField(max_length=50)
@@ -10,6 +11,6 @@ class Music(models.Model):
     album = models.TextField()
     likes = models.ManyToManyField(User, related_name="likes_music")
     music_image = models.TextField()
-    
+
     def __str__(self):
         return str(self.name)
